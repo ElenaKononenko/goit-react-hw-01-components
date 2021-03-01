@@ -9,11 +9,16 @@ thead {
   color: white;
   font-size: 20px;
   background-color: #5ccccc;
-  border: 1px solid white;
 }
 th {
-  border: 1px solid white;
+  border-left: 1px solid #5ccccc;
+  border-top: 1px solid #5ccccc;
+  border-bottom: 1px solid #5ccccc;
+  border-right: 1px solid white;
   padding: 15px;
+}
+th:last-child {
+  border-right: 1px solid #5ccccc;
 }
 th:nth-child(n + 4),
 td {

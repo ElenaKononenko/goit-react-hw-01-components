@@ -31,8 +31,7 @@
 .tag {
   margin-bottom: 10px;
 }
-.location {
-}
+
 .stats {
   display: flex;
   justify-content: space-between;
@@ -43,7 +42,7 @@
   margin: 0;
 }
 .statsItem {
-  width: calc((100%\3));
+  width: calc((100% / 3));
   padding: 10px;
 }
 .statsItem:not(:last-child) {

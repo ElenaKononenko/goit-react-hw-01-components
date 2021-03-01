@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from './Statistics.module.css';
+import styleStatistics from './Statistics.module.css';
 
 const Statistics = ({ title, stats }) => {
   return (
-    <section className={style.statistics}>
-      <div className={style.titleDirection}>
-        <h2 className={style.title}>{title.toUpperCase()}</h2>
+    <section className={styleStatistics.statistics}>
+      <div className={styleStatistics.titleDirection}>
+        <h2 className={styleStatistics.title}>{title.toUpperCase()}</h2>
       </div>
-      <ul className={style.statList}>
+      <ul className={styleStatistics.statList}>
         {stats.map(({ label, percentage, id }) => {
           return (
             <li
               key={id}
-              className={style.item}
+              className={styleStatistics.item}
               style={{
                 backgroundColor:
                   '#' +
@@ -22,8 +22,8 @@ const Statistics = ({ title, stats }) => {
                     .toUpperCase(),
               }}
             >
-              <span className={style.label}>{label}</span>
-              <span className={style.percentage}>{percentage}%</span>
+              <span className={styleStatistics.label}>{label}</span>
+              <span className={styleStatistics.percentage}>{percentage}%</span>
             </li>
           );
         })}

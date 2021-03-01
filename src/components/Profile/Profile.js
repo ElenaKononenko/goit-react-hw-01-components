@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
-import styles from './Profile.module.css';
+import stylesProfile from './Profile.module.css';
 import defaultImage from '../../images/defImg.png';
 
 const Profile = ({
@@ -11,32 +11,32 @@ const Profile = ({
   location,
   stats: { followers, views, likes },
 }) => (
-  <div className={styles.profile}>
-    <div className={styles.description}>
+  <div className={stylesProfile.profile}>
+    <div className={stylesProfile.description}>
       <img
         src={avatar}
         alt="Аватар пользователя"
-        className={styles.avatar}
+        className={stylesProfile.avatar}
         width={100}
         height={100}
       />
-      <p className={styles.name}>{name}</p>
-      <p className={styles.tag}>@{tag}</p>
-      <p className={styles.location}>{location}</p>
+      <p className={stylesProfile.name}>{name}</p>
+      <p className={stylesProfile.tag}>@{tag}</p>
+      <p className={stylesProfile.location}>{location}</p>
     </div>
 
-    <ul className={styles.stats}>
-      <li className={styles.statsItem}>
-        <span className={styles.label}>Followers</span>
-        <span className={styles.quantity}>{followers}</span>
+    <ul className={stylesProfile.stats}>
+      <li className={stylesProfile.statsItem}>
+        <span className={stylesProfile.label}>Followers</span>
+        <span className={stylesProfile.quantity}>{followers}</span>
       </li>
-      <li className={styles.statsItem}>
-        <span className={styles.label}>Views</span>
-        <span className={styles.quantity}>{views}</span>
+      <li className={stylesProfile.statsItem}>
+        <span className={stylesProfile.label}>Views</span>
+        <span className={stylesProfile.quantity}>{views}</span>
       </li>
-      <li className={styles.statsItem}>
-        <span className={styles.label}>Likes</span>
-        <span className={styles.quantity}>{likes}</span>
+      <li className={stylesProfile.statsItem}>
+        <span className={stylesProfile.label}>Likes</span>
+        <span className={stylesProfile.quantity}>{likes}</span>
       </li>
     </ul>
   </div>
