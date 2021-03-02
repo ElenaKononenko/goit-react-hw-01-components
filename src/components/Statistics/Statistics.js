@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 import styleStatistics from './Statistics.module.css';
 
 const Statistics = ({ title, stats }) => {
+  const isTitle = title
+    ? styleStatistics.titleContainer
+    : styleStatistics.title;
   return (
     <section className={styleStatistics.statistics}>
-      <div className={styleStatistics.titleDirection}>
-        <h2 className={styleStatistics.title}>{title.toUpperCase()}</h2>
-      </div>
+      <h2 className={isTitle}>{title.toUpperCase()}</h2>
+
       <ul className={styleStatistics.statList}>
         {stats.map(({ label, percentage, id }) => {
           return (
